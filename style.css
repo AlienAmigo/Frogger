@@ -1,0 +1,61 @@
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+
+  margin: 0;
+}
+
+
+.game {
+  --tile-width: 101px;
+  --tile-height: 84px;
+  --tile-offset-y: -50px;
+  height: 100vh;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  position: relative;
+}
+
+.game__level {
+  display: block;
+  position: absolute;
+  left: 20px;
+  top: 20px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 32px;
+  font-weight: 600;
+
+}
+
+.game__field {
+  position: relative;
+  margin: auto;
+  width: calc(var(--tile-width) * 7);
+  height: calc(var(--tile-height) * 6);
+  overflow: hidden;
+  background:
+    url(img/grass-block.png) 0 calc(var(--tile-offset-y) + var(--tile-height) * 5),
+    url(img/stone-block.png) 0 calc(var(--tile-offset-y) + var(--tile-height) * 4),
+    url(img/stone-block.png) 0 calc(var(--tile-offset-y) + var(--tile-height) * 3),
+    url(img/stone-block.png) 0 calc(var(--tile-offset-y) + var(--tile-height) * 2),
+    url(img/stone-block.png) 0 calc(var(--tile-offset-y) + var(--tile-height) * 1),
+    url(img/water-block.png) 0 calc(var(--tile-offset-y) + var(--tile-height) * 0);
+  background-repeat: repeat-x;
+  background-color: pink;
+}
+
+.game__hero {
+  position: absolute;
+  left: 0;
+  top: -70px;
+}
+
+.game__bug {
+  position: absolute;
+  left: 0;
+  top: -72px;
+}
